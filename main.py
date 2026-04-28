@@ -4,6 +4,9 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from sqlalchemy.orm import Session
 from PIL import Image
+# Esto le dice a SQLAlchemy que cree las tablas si no existen
+from database import engine, Base
+Base.metadata.create_all(bind=engine)
 import io
 import json
 import os
