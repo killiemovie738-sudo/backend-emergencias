@@ -729,7 +729,7 @@ async def subir_foto_evidencia(
             f.write(image_bytes)
         
         # 5. Construir la URL pública para acceder a la imagen
-        url_imagen = f"http://localhost:8000/uploads/{nombre_archivo}"
+        url_imagen = f"https://backend-emergencias-production.up.railway.app/uploads/{nombre_archivo}"
         
         # 6. Guardar la URL en la base de datos
         emergencia.foto_url = url_imagen
